@@ -52,6 +52,7 @@ open class VideoPlaybackControlView: _View, ThemeProvider {
     private var playerStatusObserver: NSKeyValueObservation?
     private var playerItemObserver: NSKeyValueObservation?
     private var itemDurationObserver: NSKeyValueObservation?
+    private var _currentPlayer: AVPlayer? { player }
     
     /// A content displayed by the view.
     open var content: Content = .initial {
@@ -270,6 +271,6 @@ open class VideoPlaybackControlView: _View, ThemeProvider {
     
     deinit {
         NotificationCenter.default.removeObserver(self)
-        unsubscribeFromPlayerNotifications(player)
+        unsubscribeFromPlayerNotifications(_currentPlayer)
     }
 }
