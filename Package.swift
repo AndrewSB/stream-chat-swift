@@ -59,7 +59,8 @@ let package = Package(
                     .product(name: "Swifter", package: "Swifter")
                 ],
                 path: "TestTools/StreamChatTestMockServer",
-                exclude: ["Info.plist"]
+                exclude: ["Info.plist"],
+                resources: [.copy("Fixtures/JSONs/*.json")]
         ),
     ]
 )
