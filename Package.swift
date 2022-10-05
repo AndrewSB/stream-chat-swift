@@ -50,7 +50,10 @@ let package = Package(
                     .product(name: "StreamChatTestHelpers", package: "StreamChatTestHelpers"),
                 ],
                 path: "TestTools/StreamChatTestTools",
-                exclude: ["Info.plist"]
+                exclude: ["Info.plist"],
+                resources: [
+                        .process("Fixtures/JSONs/http_channels.json")
+                ]
         ),
         .target(name: "StreamChatTestMockServer",
                 dependencies: [
