@@ -63,7 +63,7 @@ let package = Package(
                 ],
                 path: "TestTools/StreamChatTestMockServer",
                 exclude: ["Info.plist"],
-                resources: [.copy("StreamChatTestMockServer/Fixtures")]
+                resources: [.copy("Fixtures")]
         ),
     ]
 )
