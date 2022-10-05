@@ -44,7 +44,7 @@ let package = Package(
             exclude: ["Info.plist", "Generated/L10n_template.stencil"],
             resources: [.process("Resources")]
         ),
-        .testTarget(name: "StreamChatTestTools",
+        .target(name: "StreamChatTestTools",
                 dependencies: [
                     .target(name: "StreamChat"),
                     .product(name: "StreamChatTestHelpers", package: "StreamChatTestHelpers"),
@@ -55,7 +55,7 @@ let package = Package(
                         .process("Fixtures")
                 ]
         ),
-        .testTarget(name: "StreamChatTestMockServer",
+        .target(name: "StreamChatTestMockServer",
                 dependencies: [
                     .target(name: "StreamChat"),
                     .product(name: "StreamChatTestHelpers", package: "StreamChatTestHelpers"),
@@ -63,7 +63,7 @@ let package = Package(
                 ],
                 path: "TestTools/StreamChatTestMockServer",
                 exclude: ["Info.plist"],
-                resources: [.copy("Fixtures")]
+                resources: [.copy("StreamChatTestMockServer/Fixtures")]
         ),
     ]
 )
