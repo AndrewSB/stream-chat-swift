@@ -63,7 +63,10 @@ let package = Package(
                 ],
                 path: "TestTools/StreamChatTestMockServer",
                 exclude: ["Info.plist"],
-                resources: [.process("Fixtures")]
+                resources: [
+                    .copy("Fixtures/JSONs/http_channels.json"),
+                    .copy("Fixtures/JSONs/http_events.json")
+                ]
         ),
     ]
 )
