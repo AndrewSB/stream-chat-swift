@@ -9,7 +9,7 @@ extension Bundle {
     private final class StreamChatTestMockServer {}
 
     static let bundleName = "StreamChat_StreamChatTestMockServer"
-    static let resourcesJSONs = "TestTools/StreamChatTestMockServer/Fixtures/JSONs/"
+    static let resourcesJSONs = ""
 
     /// Returns the resource bundle associated with the current Swift module.
     static let testTools: Bundle = {
